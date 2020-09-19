@@ -66,8 +66,8 @@
 // Loading Map Information, promise -> asyn
 function loadData() {
     return Promise.all([
-        d3.csv("https://lvdesign.com.fr/d3jsdocs/routes.csv"),
-        d3.json("https://lvdesign.com.fr/d3jsdocs/countries.geo.json"),
+        d3.csv("routes.csv"),
+        d3.json("countries.geo.json"),
     ]).then(datasets => {
         store.routes = datasets[0];
         store.geoJSON = datasets[1]
